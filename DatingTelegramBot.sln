@@ -11,11 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{FBA766EB-7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{763E1A22-CF53-4420-9CDB-74278B0D10AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatingTelegramBot.Domain", "DatingTelegramBot.Domain\DatingTelegramBot.Domain.csproj", "{6ACA250B-1DA5-4FC8-BD4E-01D064FC41F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatingTelegramBot.Domain", "DatingTelegramBot.Domain\DatingTelegramBot.Domain.csproj", "{6ACA250B-1DA5-4FC8-BD4E-01D064FC41F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatingTelegramBot.Application", "DatingTelegramBot.Application\DatingTelegramBot.Application.csproj", "{EDCFA880-63ED-4C82-AE6D-4EE22E942324}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatingTelegramBot.Application", "DatingTelegramBot.Application\DatingTelegramBot.Application.csproj", "{EDCFA880-63ED-4C82-AE6D-4EE22E942324}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatingTelegramBot.Persistence", "DatingTelegramBot.Persistence\DatingTelegramBot.Persistence.csproj", "{B4555989-A6F6-4EE8-97FE-1DE940CAB27F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatingTelegramBot.Persistence", "DatingTelegramBot.Persistence\DatingTelegramBot.Persistence.csproj", "{B4555989-A6F6-4EE8-97FE-1DE940CAB27F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatingTelegramBot.Service", "DatingTelegramBot.Service\DatingTelegramBot.Service.csproj", "{F072A52F-F433-4480-A017-98998EC802E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B4555989-A6F6-4EE8-97FE-1DE940CAB27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4555989-A6F6-4EE8-97FE-1DE940CAB27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4555989-A6F6-4EE8-97FE-1DE940CAB27F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F072A52F-F433-4480-A017-98998EC802E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F072A52F-F433-4480-A017-98998EC802E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F072A52F-F433-4480-A017-98998EC802E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F072A52F-F433-4480-A017-98998EC802E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{6ACA250B-1DA5-4FC8-BD4E-01D064FC41F9} = {FBA766EB-74C3-41FC-B1D9-3F43CB46D06C}
 		{EDCFA880-63ED-4C82-AE6D-4EE22E942324} = {FBA766EB-74C3-41FC-B1D9-3F43CB46D06C}
 		{B4555989-A6F6-4EE8-97FE-1DE940CAB27F} = {763E1A22-CF53-4420-9CDB-74278B0D10AA}
+		{F072A52F-F433-4480-A017-98998EC802E9} = {763E1A22-CF53-4420-9CDB-74278B0D10AA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1288510A-ECC8-457C-8A62-143162FF5ED2}
