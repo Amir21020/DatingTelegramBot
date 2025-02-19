@@ -43,7 +43,6 @@ public sealed class CommandExecutor(IServiceScopeFactory serviceProvider,
         if (update.Id <= userCommandState.lastUpdateId)
             return;
 
-        var typeMessage = update.Message.Type;
         var text = update.Message.Text;
         var chatId = update.Message.Chat.Id;
 
