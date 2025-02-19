@@ -6,14 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="MediatR" Version="12.4.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
-    <PackageReference Include="StackExchange.Redis" Version="2.8.24" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\DatingTelegramBot.Domain\DatingTelegramBot.Domain.csproj" />
-  </ItemGroup>
-
 </Project>
