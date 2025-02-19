@@ -1,31 +1,27 @@
-using DatingTelegramBot.Persistence.Data;
-using Microsoft.EntityFrameworkCore;
+using DatingTelegramBot.Errors;
+using DatingTelegramBot.Extensions;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
+builder.Host.UseSerilog((context, configuration) => 
+    configuration.ReadFrom.Configuration(context.Configuration));
+var config = builder.Configuration;
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-var connectionString = builder.Configuration.GetConnectionString("Database");
-builder.Services.AddDbContext<DatingDbContext>(options =>
-{
-    options.UseNpgsql(connectionString, b => b.MigrationsAssembly("DatingTelegramBot"));
-});
+builder.Services.AddTelegramBot();
+builder.Services.AddDbContext(config);
+builder.Services.AddMemoryCache();
+builder.Services.ConfigureTelegramBotMvc();
+builder.Services.AddHelpers();
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
+builder.Services.AddOptions(config);
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseExceptionHandler();
 
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
+app.UseSerilogRequestLogging();
 
 app.MapControllers();
 

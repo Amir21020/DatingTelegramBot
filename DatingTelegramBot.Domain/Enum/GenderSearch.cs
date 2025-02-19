@@ -1,7 +1,8 @@
 ﻿namespace DatingTelegramBot.Domain.Enum;
 
-public enum Gender
+public enum GenderSearch
 {
     Man,
-    Woman
+    Woman,
+    Anyway
 }
